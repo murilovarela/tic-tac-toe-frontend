@@ -3,6 +3,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 
 import PlayerSelection from "../components/PlayerSelection";
+import Button from "../components/Button";
 
 const Home: NextPage = () => {
   return (
@@ -15,7 +16,12 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>Tic Tac Toe</h1>
-        <PlayerSelection />
+        <div className={styles.game}>
+          <PlayerSelection />
+          <Button onClick={() => {}} size="medium" fullWidth>
+            Play
+          </Button>
+        </div>
       </main>
 
       <footer className={styles.footer}>
