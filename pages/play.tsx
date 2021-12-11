@@ -1,3 +1,4 @@
+import { ComponentProps } from "react";
 import type { NextPage } from "next";
 import Player from "../components/Player";
 
@@ -51,7 +52,7 @@ const values = [
     y: 3,
     value: null,
   },
-];
+] as ComponentProps<typeof Table>["values"];
 
 const playerTurn = "x";
 

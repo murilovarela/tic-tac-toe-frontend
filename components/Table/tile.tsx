@@ -2,7 +2,7 @@ import type { FC } from "react";
 
 import styles from "./Tile.module.css";
 import Player from "../Player";
-import EmptyTile from "./EmptyTile";
+import EmptyTile from "./emptyTile";
 
 type Tile = {
   x: number;

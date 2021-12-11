@@ -2,7 +2,7 @@ import type { FC, ComponentProps } from "react";
 
 import styles from "./Table.module.css";
 import Tile from "./tile";
-import Bars from "./Bars";
+import Bars from "./bars";
 
 type Props = {
   values: Array<ComponentProps<typeof Tile>["value"]>;
