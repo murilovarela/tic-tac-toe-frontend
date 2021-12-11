@@ -12,7 +12,10 @@
 
   --padding-default: 10px;
   --margin-small: 5px;
+  --margin-medium: 10px;
+  --margin-large: 20px;
 
+  --font-size-px: 12px;
   font-size: 12px;
   --font-size-small: 1rem;
   --font-size-medium: 2.5rem;
@@ -21,18 +24,9 @@
   --transition-time-fast: 100ms;
   --transition-time-normal: 150ms;
   --transition-time-slow: 200ms;
-
-  --mq-medium: 600px;
-  --mq-large: 768px;
 }
 
 @media only screen and (min-width: 600px) {
-  :root {
-    font-size: 16px;
-  }
-}
-
-@media only screen and (min-width: 780px) {
   :root {
     font-size: 20px;
   }

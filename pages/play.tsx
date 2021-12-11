@@ -1,16 +1,71 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import Player from "../components/Player";
 
 import Shell from "../components/Shell";
-import Button from "../components/Button";
+import Table from "../components/Table";
+import styles from "../styles/Play.module.css";
+
+const values = [
+  {
+    x: 1,
+    y: 1,
+    value: "o",
+  },
+  {
+    x: 1,
+    y: 2,
+    value: null,
+  },
+  {
+    x: 1,
+    y: 3,
+    value: "x",
+  },
+  {
+    x: 2,
+    y: 1,
+    value: null,
+  },
+  {
+    x: 2,
+    y: 2,
+    value: null,
+  },
+  {
+    x: 2,
+    y: 3,
+    value: null,
+  },
+  {
+    x: 3,
+    y: 1,
+    value: null,
+  },
+  {
+    x: 3,
+    y: 2,
+    value: null,
+  },
+  {
+    x: 3,
+    y: 3,
+    value: null,
+  },
+];
+
+const playerTurn = "x";
 
 const Play: NextPage = () => {
   return (
     <Shell>
-      <Button onClick={() => {}} size="medium" fullWidth>
-        Play
-      </Button>
+      <h2 className={styles.turn}>
+        {"It's "}
+        <span className={styles.player}>
+          <Player variant={playerTurn} />
+        </span>
+        {" 's turn!"}
+      </h2>
+      <Table values={values} />
     </Shell>
   );
 };
