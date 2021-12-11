@@ -1,6 +1,6 @@
 .container {
   padding: 0 2rem;
-  background-color: var(--color-toquoise);
+  background-color: var(--color-carrot);
 }
 
 .main {
@@ -20,6 +20,7 @@
   border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
+  color: var(--color-midnight);
 }
 
 .footer a {
@@ -33,7 +34,15 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: var(--font-size-large);
   text-align: center;
-  color: var(--color-midnight);
+  color: var(--color-sunflower);
+}
+
+.game {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
