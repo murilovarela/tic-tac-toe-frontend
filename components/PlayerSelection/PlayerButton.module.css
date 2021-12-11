@@ -1,0 +1,21 @@
+.btn {
+  background-color: transparent;
+  padding: var(--padding-default);
+  border: none;
+  transition: background-color var(--transition-time-normal) ease;
+  border-radius: var(--border-radius-default);
+  cursor: pointer;
+}
+
+.btn svg * {
+  stroke: var(--color-sunflower);
+  transition: stroke var(--transition-time-fast) ease;
+}
+
+.active {
+  background-color: var(--color-sunflower);
+}
+
+.active svg * {
+  stroke: var(--color-carrot);
+}

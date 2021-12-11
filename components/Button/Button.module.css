@@ -1,0 +1,30 @@
+.btn {
+  background-color: var(--color-sunflower);
+  padding: var(--padding-default);
+  border: none;
+  transition: background-color var(--transition-time-fast) ease;
+  border-radius: var(--border-radius-default);
+  cursor: pointer;
+  color: var(--color-carrot);
+  text-transform: uppercase;
+}
+
+.btn:active {
+  background-color: var(--color-alizarin);
+}
+
+.small {
+  font-size: var(--font-size-small);
+}
+
+.medium {
+  font-size: var(--font-size-medium);
+}
+
+.large {
+  font-size: var(--font-size-large);
+}
+
+.fullWidth {
+  width: 100%;
+}
