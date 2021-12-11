@@ -1,0 +1,48 @@
+.container {
+  padding: 0 2rem;
+  background-color: var(--color-carrot);
+}
+
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  flex: 1;
+  padding: 2rem 0;
+  border-top: 1px solid #eaeaea;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-midnight);
+}
+
+.footer a {
+  text-decoration: underline;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: var(--font-size-large);
+  text-align: center;
+  color: var(--color-sunflower);
+}
+
+.game {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
