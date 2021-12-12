@@ -13,6 +13,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  min-height: 100vh;
 }
 
 .footer {
@@ -23,12 +24,12 @@
   justify-content: center;
   align-items: center;
   color: var(--color-midnight);
-  height: 100px;
+  max-height: 80px;
 }
 
 @media only screen and (min-width: 600px) {
   .footer {
-    height: 100px;
+    max-height: 100px;
   }
 }
 
@@ -54,4 +55,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 3rem 0;
+}
+
+@media only screen and (min-width: 600px) {
+  .game {
+    padding: 4rem 0;
+  }
 }
