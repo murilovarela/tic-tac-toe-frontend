@@ -14,14 +14,14 @@ type Props = {
   value: Tile;
 };
 
-function getPlayer(value: Tile["value"]) {
+function getPlayer(value: Tile["value"], x: number, y: number) {
   switch (value) {
     case "x":
       return <Player variant="x" />;
     case "o":
       return <Player variant="o" />;
     default:
-      return <EmptyTile />;
+      return <EmptyTile x={x} y={y} />;
   }
 }
 
@@ -31,7 +31,7 @@ const Tile: FC<Props> = ({ value: { value, x, y } }) => {
       className={styles.container}
       style={{ gridColumn: `${x} / ${x}`, gridRow: `${y} / ${y}` }}
     >
-      {getPlayer(value)}
+      {getPlayer(value, x, y)}
     </div>
   );
 };

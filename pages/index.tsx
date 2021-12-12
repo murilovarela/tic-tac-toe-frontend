@@ -2,15 +2,13 @@ import type { NextPage } from "next";
 
 import Shell from "../components/Shell";
 import PlayerSelection from "../components/PlayerSelection";
-import Button from "../components/Button";
+import StartGameButton from "../components/StartGameButton";
 
 const Home: NextPage = () => {
   return (
     <Shell>
       <PlayerSelection />
-      <Button onClick={() => {}} size="medium" fullWidth>
-        Play
-      </Button>
+      <StartGameButton />
     </Shell>
   );
 };
