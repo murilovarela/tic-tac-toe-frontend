@@ -4,7 +4,8 @@ import io, { Socket } from "socket.io-client";
 import { useRouter } from "next/router";
 import axios from "axios";
 
-const API_ENDPOINT: string = process.env.API_HOST ?? "http://localhost:4000";
+const API_ENDPOINT: string =
+  process.env.NEXT_PUBLIC_API_HOST ?? "http://localhost:4000";
 
 type UserFigure = "x" | "o";
 

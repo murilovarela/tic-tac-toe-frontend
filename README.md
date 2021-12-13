@@ -1,4 +1,6 @@
-This is the front-end of a tic-tac-toe game made with Next.js. The backend can be fount in the [murilovarela/tic-tac-toe-backend](https://github.com/murilovarela/tic-tac-toe-backend) repository.
+This is the front-end of a tic-tac-toe game made with Next.js. The backend can be found in the [murilovarela/tic-tac-toe-backend](https://github.com/murilovarela/tic-tac-toe-backend) repository.
+
+[Live preview](https://tic-tac-toe-frontend-flame.vercel.app/)
 
 ## Getting Started
 
