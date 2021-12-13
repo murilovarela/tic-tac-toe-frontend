@@ -1,12 +1,12 @@
-import type { FC, ComponentProps } from "react";
+import type { FC } from "react";
 
 import styles from "./Table.module.css";
 import Tile from "./tile";
 import Bars from "./bars";
-
-type Props = {
-  values: Array<ComponentProps<typeof Tile>["value"]>;
-};
+import { useGame } from "../../hooks/useGame";
+import Spinner from "../spinner";
+import Player from "../Player";
+import Link from "next/link";
 
 function getTableStyle(size: number) {
   const dimension = Math.sqrt(size);
@@ -15,16 +15,34 @@ function getTableStyle(size: number) {
   };
 }
 
-const Table: FC<Props> = ({ values }) => {
+const Table: FC<{}> = () => {
+  const { board, currentTurn } = useGame();
+
+  if (!board) {
+    return <Spinner />;
+  }
+
   return (
-    <div className={styles.container}>
-      <Bars size={values.length} />
-      <div className={styles.wrapper} style={getTableStyle(values.length)}>
-        {values.map((item) => (
-          <Tile value={item} key={Object.values(item).join("-")} />
-        ))}
+    <>
+      <h2 className={styles.turn}>
+        {"It's "}
+        <span className={styles.player}>
+          <Player variant={currentTurn} />
+        </span>
+        {" 's turn!"}
+      </h2>
+      <div className={styles.container}>
+        <Bars size={board.length} />
+        <div className={styles.wrapper} style={getTableStyle(board.length)}>
+          {board.map((item: any) => (
+            <Tile value={item} key={Object.values(item).join("-")} />
+          ))}
+        </div>
       </div>
-    </div>
+      <Link href="/">
+        <a className={styles.leave}>Leave this game</a>
+      </Link>
+    </>
   );
 };
 

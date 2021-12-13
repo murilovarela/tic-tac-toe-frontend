@@ -1,14 +1,1 @@
-.turn {
-  display: inline-flex;
-  align-items: center;
-  color: var(--color-sunflower);
-}
 
-.player {
-  height: 50px;
-  margin-left: 10px;
-}
-
-.player svg * {
-  stroke: var(--color-sunflower);
-}

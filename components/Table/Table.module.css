@@ -13,3 +13,27 @@
   stroke: var(--color-sunflower);
   transition: stroke var(--transition-time-fast) ease;
 }
+
+.turn {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-sunflower);
+}
+
+.player {
+  height: 50px;
+  margin-left: 10px;
+}
+
+.player svg * {
+  stroke: var(--color-sunflower);
+}
+
+.leave {
+  color: var(--color-midnight);
+  font-size: var(--font-size-small);
+}
+
+.leave:hover {
+  text-decoration: underline;
+}
