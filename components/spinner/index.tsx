@@ -3,7 +3,7 @@ import Player from "../Player";
 
 const Spinner = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-cy="spinner">
       <div className={styles.wrapper}>
         <div className={styles.xAnimation}>
           <Player variant="x" />

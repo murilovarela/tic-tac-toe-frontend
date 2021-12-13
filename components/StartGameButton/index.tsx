@@ -15,6 +15,7 @@ const StartGameButton: FC<{}> = () => {
         size="medium"
         fullWidth
         disabled={loadingSettings || waitingForPlayers}
+        data-cy="start-btn"
       >
         {waitingForPlayers ? (
           <div className={styles.spinner}>

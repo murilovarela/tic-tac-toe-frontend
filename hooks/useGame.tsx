@@ -4,6 +4,8 @@ import io, { Socket } from "socket.io-client";
 import { useRouter } from "next/router";
 import axios from "axios";
 
+const API_ENDPOINT: string = process.env.API_HOST ?? "http://localhost:4000";
+
 type UserFigure = "x" | "o";
 
 type ContextProps = {
@@ -59,7 +61,11 @@ export const GameProvider: FC<PropsWithChildren<{}>> = ({ children }) => {
   const [board, setBoard] = useState<any>(null);
 
   useEffect(() => {
-    const socketInstance = io("http://localhost:4000/");
+    const socketInstance = io(`${API_ENDPOINT}/`);
+
+    if ((window as any).Cypress) {
+      (window as any).socketIo = socketInstance;
+    }
 
     setSocket(socketInstance);
     return () => {
@@ -134,7 +140,7 @@ export const GameProvider: FC<PropsWithChildren<{}>> = ({ children }) => {
         const storedUserId = localStorage.getItem("userId");
 
         const { data: userIdResponse } = await axios.post(
-          "http://localhost:4000/authenticate",
+          `${API_ENDPOINT}/authenticate`,
           { playerId: storedUserId }
         );
 

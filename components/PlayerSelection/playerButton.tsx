@@ -13,6 +13,7 @@ const PlayerButton: FC<Props> = ({ onClick, variant, selected }) => {
     <button
       onClick={onClick}
       className={`${styles.btn} ${selected ? styles.active : ""}`}
+      data-cy={`figure-btn-${variant}`}
     >
       <Player variant={variant} />
     </button>
