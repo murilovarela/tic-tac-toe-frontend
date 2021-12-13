@@ -5,6 +5,7 @@
   transition: background-color var(--transition-time-normal) ease;
   border-radius: var(--border-radius-default);
   cursor: pointer;
+  max-height: 300px;
 }
 
 .btn svg * {

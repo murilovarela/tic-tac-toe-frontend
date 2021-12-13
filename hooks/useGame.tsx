@@ -171,7 +171,7 @@ export const GameProvider: FC<PropsWithChildren<{}>> = ({ children }) => {
         loadingSettings,
         handleStartGame,
         board,
-        currentTurn: board?.at(-1).value === "x" ? "o" : "x",
+        currentTurn: board?.[board?.length - 1].value === "x" ? "o" : "x",
         waitingForPlayers,
       }}
     >

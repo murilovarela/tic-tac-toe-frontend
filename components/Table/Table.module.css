@@ -23,6 +23,7 @@
 .player {
   height: 50px;
   margin-left: 10px;
+  width: 1.5rem;
 }
 
 .player svg * {
