@@ -1,12 +1,8 @@
 :root {
-  --color-toquoise: #1abc9c;
-  --color-midnight: #2c3e50;
-  --color-pormegranate: #c0392b;
+  --color-midnight: #d6ebff;
   --color-alizarin: #e74c3c;
-  --color-clouds: #ecf0f1;
-  --color-carrot: #e67e22;
-  --color-sunflower: #f1c40f;
-  --color-orange: #f0a630;
+  --color-carrot: #293d68;
+  --color-sunflower: #ffe47a;
 
   --border-radius-default: 8px;
 

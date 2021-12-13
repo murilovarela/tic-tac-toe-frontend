@@ -5,8 +5,7 @@ import Spinner from "../spinner";
 import styles from "./StartGameButton.module.css";
 
 const StartGameButton: FC<{}> = () => {
-  const { loadingSettings, handleStartGame, userId, waitingForPlayers } =
-    useGame();
+  const { loadingSettings, handleStartGame, waitingForPlayers } = useGame();
 
   return (
     <>
@@ -25,7 +24,6 @@ const StartGameButton: FC<{}> = () => {
           "Play"
         )}
       </Button>
-      <p>User ID: {userId}</p>
     </>
   );
 };

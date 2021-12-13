@@ -13,6 +13,7 @@ const PlayerButton: FC<Props> = ({ onClick, variant, selected }) => {
     <button
       onClick={onClick}
       className={`${styles.btn} ${selected ? styles.active : ""}`}
+      aria-label={variant === "x" ? "select cross" : "select circle"}
       data-cy={`figure-btn-${variant}`}
     >
       <Player variant={variant} />

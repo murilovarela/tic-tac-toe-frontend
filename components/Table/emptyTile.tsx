@@ -12,7 +12,11 @@ type Props = {
 const EmptyTile: FC<Props> = ({ x, y }) => {
   const { userFigure, selectTile } = useGame();
   return (
-    <button className={styles.btn} onClick={() => selectTile(x, y)}>
+    <button
+      className={styles.btn}
+      onClick={() => selectTile(x, y)}
+      aria-label={`tile ${x} ${y}`}
+    >
       <Player variant={userFigure} />
     </button>
   );
