@@ -30,6 +30,7 @@ const Tile: FC<Props> = ({ value: { value, x, y } }) => {
     <div
       className={styles.container}
       style={{ gridColumn: `${x} / ${x}`, gridRow: `${y} / ${y}` }}
+      data-cy={`${x}-${y}-${value}`}
     >
       {getPlayer(value, x, y)}
     </div>

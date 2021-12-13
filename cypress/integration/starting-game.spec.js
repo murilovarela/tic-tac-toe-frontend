@@ -41,7 +41,8 @@ describe("tic tac toe game", () => {
   });
 
   it("Awaits for player when clicked in the 'play' button", () => {
-    cy.contains("Play").click();
+    cy.contains("Play").as("play").click();
     cy.get("[data-cy=spinner]").should("be.visible");
+    cy.get("@play").should("be.disabled");
   });
 });
